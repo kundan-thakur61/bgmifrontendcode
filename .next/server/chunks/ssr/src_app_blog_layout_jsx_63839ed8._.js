@@ -1,0 +1,3 @@
+module.exports=[15598,a=>{"use strict";let b=(0,a.i(49378).generateMetadata)({title:"Gaming Tips, Guides & Esports News - BattleZone Blog",description:"Expert BGMI & Free Fire tips, tournament strategies, esports news, and gaming guides. Learn from pro players and dominate the competition.",keywords:"BGMI tips, Free Fire guide, esports news India, gaming strategies, tournament tips, pro player guides",url:"/blog"});function c({children:a}){return a}a.s(["default",()=>c,"metadata",0,b])}];
+
+//# sourceMappingURL=src_app_blog_layout_jsx_63839ed8._.js.map
