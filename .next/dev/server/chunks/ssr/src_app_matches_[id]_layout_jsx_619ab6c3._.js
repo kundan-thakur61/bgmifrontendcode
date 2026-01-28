@@ -11,10 +11,11 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$seo$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/lib/seo.js [app-rsc] (ecmascript)");
 ;
 async function generateMetadata({ params }) {
+    const { id } = await params;
     // Fetch match data for metadata
     const API_BASE_URL = ("TURBOPACK compile-time value", "http://localhost:5000/api") || 'http://localhost:5000/api';
     try {
-        const response = await fetch(`${API_BASE_URL}/matches/${params.id}`, {
+        const response = await fetch(`${API_BASE_URL}/matches/${id}`, {
             next: {
                 revalidate: 60
             }
@@ -23,7 +24,7 @@ async function generateMetadata({ params }) {
             return (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$seo$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateMetadata"])({
                 title: 'Match Details',
                 description: 'View match details on BattleZone',
-                url: `/matches/${params.id}`
+                url: `/matches/${id}`
             });
         }
         const data = await response.json();
@@ -32,7 +33,7 @@ async function generateMetadata({ params }) {
             return (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$seo$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateMetadata"])({
                 title: 'Match Details',
                 description: 'View match details on BattleZone',
-                url: `/matches/${params.id}`
+                url: `/matches/${id}`
             });
         }
         const title = `${match.title} - Join Now | BattleZone`;
@@ -50,7 +51,7 @@ async function generateMetadata({ params }) {
             title,
             description,
             keywords,
-            url: `/matches/${params.id}`,
+            url: `/matches/${id}`,
             image: match.banner?.url || '/og-matches.jpg',
             type: 'website'
         });
@@ -58,7 +59,7 @@ async function generateMetadata({ params }) {
         return (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$seo$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["generateMetadata"])({
             title: 'Match Details',
             description: 'View match details on BattleZone',
-            url: `/matches/${params.id}`
+            url: `/matches/${id}`
         });
     }
 }
