@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense } from 'react';
+import { api, API_BASE_URL } from '@/lib/api';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -10,7 +10,7 @@ function RegisterContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const { register, sendOtp, verifyOtp, isAuthenticated } = useAuth();
-  
+
   const [step, setStep] = useState('phone'); // 'phone', 'otp', 'details'
   const [phone, setPhone] = useState('');
   const [otp, setOtp] = useState('');
@@ -40,7 +40,7 @@ function RegisterContent() {
   const handleSendOtp = async (e) => {
     e.preventDefault();
     setError('');
-    
+
     if (!/^[6-9]\d{9}$/.test(phone)) {
       setError('Please enter a valid 10-digit mobile number');
       return;
@@ -189,7 +189,7 @@ function RegisterContent() {
 
               {/* Google Sign In */}
               <a
-                href={`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api'}/auth/google`}
+                href={`${API_BASE_URL}/auth/google`}
                 className="w-full flex items-center justify-center gap-3 px-4 py-3 border border-dark-600 rounded-lg hover:bg-dark-700 transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24">

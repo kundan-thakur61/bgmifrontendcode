@@ -3,7 +3,7 @@ import { generateMetadata as genMeta } from '@/lib/seo';
 export async function generateMetadata({ params }) {
   const { id } = await params;
   // Fetch match data for metadata
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  const API_BASE_URL = (await import('@/lib/api')).API_BASE_URL;
 
   try {
     const response = await fetch(`${API_BASE_URL}/matches/${id}`, {
