@@ -1,3 +1,0 @@
-module.exports=[22711,a=>{"use strict";let b=(0,a.i(49378).generateMetadata)({title:"How to Win BGMI Tournaments in 2024 - Expert Guide",description:"Master BGMI tournaments with pro tips, strategies, and winning tactics. Learn how to dominate competitive matches and earn real money on BattleZone.",keywords:"BGMI tournament tips, BGMI winning strategy, BGMI pro tips, how to win BGMI, BGMI competitive guide, BGMI tournament strategy",url:"/blog/how-to-win-bgmi-tournaments-2024",type:"article"});function c({children:a}){return a}a.s(["default",()=>c,"metadata",0,b])}];
-
-//# sourceMappingURL=src_app_blog_how-to-win-bgmi-tournaments-2024_layout_jsx_093aa840._.js.map
