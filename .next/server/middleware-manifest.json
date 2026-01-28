@@ -1,0 +1,52 @@
+{
+  "version": 3,
+  "middleware": {},
+  "sortedMiddleware": [],
+  "functions": {
+    "/api/og/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "required-server-files.js",
+        "server/server-reference-manifest.js",
+        "server/app/api/og/route_client-reference-manifest.js",
+        "server/edge/chunks/_next-internal_server_app_api_og_route_actions_2e0ac838.js",
+        "server/edge/chunks/[root-of-the-server]__59719717._.js",
+        "server/edge/chunks/[root-of-the-server]__8e8e2d4d._.js",
+        "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_16be1ace._.js",
+        "server/edge/chunks/turbopack-node_modules_next_dist_esm_build_templates_edge-wrapper_849cd84b.js"
+      ],
+      "name": "app/api/og/route",
+      "page": "/api/og/route",
+      "matchers": [
+        {
+          "regexp": "^/api/og(?:/)?$",
+          "originalSource": "/api/og"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_fdb56e4cc5936d29",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_resvg_23ace1ce.wasm"
+        },
+        {
+          "name": "wasm_1ccdc983b1fd9f87",
+          "filePath": "server/edge/chunks/node_modules_next_dist_compiled_@vercel_og_yoga_23ace1ce.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf",
+          "filePath": "server/edge/assets/noto-sans-v27-latin-regular.bdfa676c.ttf"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "zMcafVjmdu7iHL63o5OfQ",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "VMmTX2qosdbnz6vJrKE7B//wSnr1Qf9sn8vNBPpS128=",
+        "__NEXT_PREVIEW_MODE_ID": "45bd89a278745fca9666987c02d46308",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "09c4d4debe571346d94a43974acc592c6fbaa0c2ab97989199de7255ff081166",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "537b98dc337afc58ab5ba90588808be5a5828e9d4eb2669ce3d16c3ed7a9743e"
+      }
+    }
+  }
+}

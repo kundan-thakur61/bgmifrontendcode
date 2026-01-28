@@ -1,0 +1,3 @@
+module.exports=[4579,a=>{"use strict";let b=(0,a.i(49378).generateMetadata)({title:"Live BGMI & Free Fire Matches - Join Now",description:"Join live BGMI and Free Fire matches. Win real cash prizes. Solo, Duo, Squad tournaments. Instant withdrawals. Play now on India's #1 esports platform.",keywords:"BGMI matches, Free Fire matches, live tournaments, esports matches, gaming tournaments India, PUBG Mobile matches, competitive gaming",url:"/matches"});function c({children:a}){return a}a.s(["default",()=>c,"metadata",0,b])}];
+
+//# sourceMappingURL=src_app_matches_layout_jsx_e0e74a42._.js.map
