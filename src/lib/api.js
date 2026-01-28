@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-<<<<<<< HEAD
 const getBaseUrl = () => {
   let url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
   // Remove trailing slash if present
@@ -15,9 +14,6 @@ const getBaseUrl = () => {
 };
 
 const API_BASE_URL = getBaseUrl();
-=======
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
->>>>>>> 5607fe8588b9103d3ccb19c7711e7e6c081476ff
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
