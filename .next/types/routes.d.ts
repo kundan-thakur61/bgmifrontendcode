@@ -4,7 +4,7 @@
 type AppRoutes = never
 type AppRouteHandlerRoutes = "/api/og"
 type PageRoutes = never
-type LayoutRoutes = "/" | "/blog" | "/blog/how-to-win-bgmi-tournaments-2024" | "/matches" | "/tournaments"
+type LayoutRoutes = "/" | "/blog" | "/blog/how-to-win-bgmi-tournaments-2024" | "/matches" | "/matches/[id]" | "/tournaments" | "/tournaments/[id]"
 type RedirectRoutes = "/old-matches" | "/old-tournaments"
 type RewriteRoutes = never
 type Routes = AppRoutes | PageRoutes | LayoutRoutes | RedirectRoutes | RewriteRoutes | AppRouteHandlerRoutes
@@ -16,9 +16,11 @@ interface ParamMap {
   "/blog": {}
   "/blog/how-to-win-bgmi-tournaments-2024": {}
   "/matches": {}
+  "/matches/[id]": { "id": string; }
   "/old-matches": {}
   "/old-tournaments": {}
   "/tournaments": {}
+  "/tournaments/[id]": { "id": string; }
 }
 
 
@@ -29,7 +31,9 @@ interface LayoutSlotMap {
   "/blog": never
   "/blog/how-to-win-bgmi-tournaments-2024": never
   "/matches": never
+  "/matches/[id]": never
   "/tournaments": never
+  "/tournaments/[id]": never
 }
 
 

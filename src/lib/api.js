@@ -1,16 +1,26 @@
 import axios from 'axios';
 
 const getBaseUrl = () => {
-  let url = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
-  // Remove trailing slash if present
-  if (url.endsWith('/')) {
-    url = url.slice(0, -1);
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    let url = process.env.NEXT_PUBLIC_API_URL;
+    // Remove trailing slash if present
+    if (url.endsWith('/')) {
+      url = url.slice(0, -1);
+    }
+    // Append /api if not present
+    if (!url.endsWith('/api')) {
+      url += '/api';
+    }
+    return url;
   }
-  // Append /api if not present
-  if (!url.endsWith('/api')) {
-    url += '/api';
+
+  // Production fallback
+  if (process.env.NODE_ENV === 'production') {
+    return 'https://bgmibackend-5gu6.onrender.com/api';
   }
-  return url;
+
+  // Development fallback
+  return 'http://localhost:5000/api';
 };
 
 const API_BASE_URL = getBaseUrl();
